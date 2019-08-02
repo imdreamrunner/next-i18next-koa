@@ -1,7 +1,7 @@
 import isNode from 'detect-node'
 import i18next from 'i18next'
 import i18nextXHRBackend from 'i18next-xhr-backend'
-import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector'
+import I18nextBrowserLanguageDetector from 'i18next-browser-languagedetector-async'
 
 const i18n = i18next.default ? i18next.default : i18next
 i18n.nsFromReactTree = []
@@ -11,7 +11,7 @@ export default (config) => {
 
     if (isNode) {
       const i18nextNodeBackend = eval("require('i18next-node-fs-backend')")
-      const i18nextMiddleware = eval("require('koa-i18next-middleware-fixed')")
+      const i18nextMiddleware = eval("require('koa-i18next-middleware-async')")
       i18n.use(i18nextNodeBackend)
       if (config.serverLanguageDetection) {
         const serverDetectors = new i18nextMiddleware.LanguageDetector()

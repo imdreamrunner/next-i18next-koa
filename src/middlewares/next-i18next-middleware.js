@@ -1,4 +1,4 @@
-import koaI18nextMiddleware from 'koa-i18next-middleware-fixed'
+import koaI18nextMiddleware from 'koa-i18next-middleware-async'
 import { parse } from 'url'
 import pathMatch from 'path-match'
 

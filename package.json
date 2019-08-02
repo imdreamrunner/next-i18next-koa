@@ -1,7 +1,7 @@
 {
-  "name": "@winstrike/next-i18next-koa",
-  "version": "0.1.14",
-  "repository": "git@github.com:winstrike/next-i18next.git",
+  "name": "@imdreamrunner/next-i18next-koa-async",
+  "version": "0.0.9",
+  "repository": "git@github.com:imdreamrunner/next-i18next-koa.git",
   "author": "Janealter <n.bakulin@winstrike.gg>",
   "main": "dist/commonjs/index.js",
   "jsnext:main": "dist/es/index.js",
@@ -39,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm test"
+      "pre-commit-backup": "npm run lint && npm test"
     }
   },
   "devDependencies": {
@@ -79,10 +79,10 @@
     "detect-node": "^2.0.4",
     "hoist-non-react-statics": "^3.2.0",
     "i18next": "^15.0.0",
-    "i18next-browser-languagedetector": "^3.0.0",
+    "i18next-browser-languagedetector-async": "^0.0.4",
     "i18next-node-fs-backend": "^2.1.0",
     "i18next-xhr-backend": "^2.0.0",
-    "koa-i18next-middleware-fixed": "^1.1.10-b3",
+    "koa-i18next-middleware-async": "^0.0.3",
     "path-match": "^1.2.4",
     "prop-types": "^15.6.2",
     "react-i18next": "9.0.10",
@@ -92,7 +92,10 @@
     "react": ">= 16.3.0"
   },
   "bugs": {
-    "url": "https://github.com/winstrike/next-i18next-koa/issues"
+    "url": "https://github.com/imdreamrunner/next-i18next-koa/issues"
   },
-  "homepage": "https://github.com/winstrike/next-i18next-koa#readme"
+  "homepage": "https://github.com/imdreamrunner/next-i18next-koa#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }
